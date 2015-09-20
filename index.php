@@ -1,0 +1,214 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mons 2015</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500,900italic,900,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/moderniz.js"></script>
+</head>
+<body>
+
+<div class="container">
+<div class="menu_container" id="monument_template">
+		<div class="hamburger"><img src="img/hamburger_w.png" alt="toggleMenu" width="28px" height="28px"></div>
+			<div class="nav">
+				<a href="#"><img src="img/close.png" alt="" class="closeMenu" ></a>
+				<div class="nav_logo">
+				 	<p><a href="#"><img src="img/logo_rw.png" alt="logo mons 2015"></a></p>
+				 	<!-- <div class="nav_fleche"></div> -->
+				</div>
+				<ul class="ul_top">
+					<li></li>
+				</ul>
+        
+               <!-- <div class="contain_fb_login">
+                <p><div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div></p>
+                </div> -->
+			<ul class="ul_bottom">
+				<li class="li_bottom"><a class="nav_bottom" href="index.php" id="home"></a></li>
+				<li class="li_bottom"><a class="nav_bottom" href="#" id="newsletter"></a></li>
+				<li class="li_bottom"><a class="nav_bottom" href="#" id="twit"></a></li>
+				<li class="li_bottom"><a class="nav_bottom" href="https://www.facebook.com/Mons2015official" id="face"></a></li>
+				
+			</ul>
+
+	</div>
+</div>
+<div id="container" class="contenu_main">
+	<section class="maps_black"></section>
+	<section class="maps" id="maps"></section>
+	<div class="contenu slide_contenu">
+		<div class="mask" ></div>
+			<section class="header_contenu" id="target_click_titre">
+
+					<div class="return_maps" id="return_maps">RETOUR A LA CARTE</div>
+					<div class="header_contenu_emploi">
+						<p>Cliquez sur les pointeurs de la carte afin d’obtenir plus d’informations sur les différentes points d’intérets architecturaux de mons 2015</p> 
+						<b>Pour poursuivre cliquez sur l'icône</b>
+						<div class="btn_hand"><p>ok</p></div> 
+						<img class="hand" src="img/info_img.png" alt="">
+
+					</div>
+					<div class="titre_h2"></div>
+
+
+				<article class="contenu_info">
+
+					<p class="header_contenu_info"></p>
+					<p class="header_contenu_info_rep"></p>
+				</article>
+			</section>
+
+			<section class="contenu_top">
+				<div>
+						<a href="#" class="button_champs" id="button_Apropos"></a>
+						<a href="#" class="button_champs" id="button_Pinteret"></a>
+				</div>
+				<div id="Apropos">
+					
+				    <div class="slider">
+	                  	<div class="slider_container_img"></div>
+                    	<div class="slider_bullets"></div>
+ 					</div>
+						<div class="contenu_propos">
+							<p>
+								<span class="contenu_propos_bold">Architectes</span> <br>
+								<span class="contenu_propos_regular"></span> <br>
+								<span class="contenu_propos_small"></span> <br>
+								<div class="line"> </div><br>
+							</p>
+							<p class="contenu_propos_red"></p>
+							<div class="contenu_propos_p"></div>
+							<p class="contenu_propos_sponsor">
+								<b class="contenu_propos_sponsor_bold">Maître d’ouvrage </b><br>
+								<div class="contenu_propos_sponsor_info"></div>
+							</p>
+						</div>
+				</div>
+				<div id="Pinteret">
+						<img src="img/pointeurMap.jpg" alt="Pointeur" class="img_curser">
+
+						<section class="pt_interet">
+							<div class="pt_interet_info">
+								<div class="pt_ic">
+									<div class="resto pt_icone"></div>
+									<div class="hosto pt_icone"></div>
+									<div class="parking pt_icone"></div>
+								</div>
+								<h3>
+									Titre
+								</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices nisi magna, at volutpat eros condimentum ut. Duis gravida ex non nulla rutrum aliquam. Proin at quam interdum,Ut ut blandit arcu. Mauris vitae tristique felis. Mauris iaculis vulputate egestas. Nunc vitae pellentesque augue. Nullam ac nunc uporta massa. Quisque posuere tincidunt magna.
+								Proin at quam interdum,Ut ut blandit arcu.</p>
+							</div>
+							<div id="pt_interet_lieu">
+								
+							</div>
+							
+							
+							
+							<div class="clear"></div>
+						</section>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="contenu_mail">
+		<div id="content">
+			<div class="mail_top">
+				<p><span>" Abonnez-vous à notre Newsletter "</span><img src="img/mail.png" alt="icone mail"></p>
+			</div>
+
+			<div class="mail_main">
+				<form action="traitement.php" method="get">
+
+					<p>
+						<label for="nom">Nom: <br>
+							<input type="text" id="nom" name="nom" placeholder="Nom">
+						</label><br>
+						<span class="error-message"></span>
+					</p>
+
+					<p>
+						<label for="email">Email: <br>
+							<input type="text" id="email" name="email" placeholder="Email">
+						</label><br>
+						<span class="error-message"></span>
+					</p>
+					<p>
+						<input id="envoyer" type="submit" value="newsletter" >
+					</p>
+				</form>
+			</div>
+		</div>
+		<div class="mail_bot" id="footer">
+			<p>
+				<a href="http://www.wallonie.be/" target="_blank"><img src="img/sponsor/wallonie.png" alt="logo wallonie"></a>
+				<a href="http://ec.europa.eu/culture/" target="_blank"><img src="img/sponsor/eu_culture.png" alt="logo capitale européenne de la culture"></a>
+				<a href="http://www.federation-wallonie-bruxelles.be/" target="_blank"><img src="img/sponsor/walonnie_bxl.png" alt="logo wallonie bruxelles"></a>
+				<a href="http://www.2015entreprises.eu/" target="_blank"><img src="img/sponsor/club.png" alt="logo club mons 2015"></a>
+				<a href="http://www.hainaut.be/template/template.asp?page=accueil" target="_blank"><img src="img/sponsor/hainaut.png" alt="logo province du hainaut"></a>
+				<a href="https://www.ing.be/fr/retail/Pages/index.aspx" target="_blank"><img src="img/sponsor/ing.png" alt="logo ing"></a>
+				<a href="http://www.mons.be/" target="_blank"><img src="img/sponsor/mons.png" alt="logo mons"></a>
+				<a href="http://www.loterie-nationale.be/fr" target="_blank"><img src="img/sponsor/lotterie.png" alt="logo loterie nationale"></a>
+				<a href="http://www.rtbf.be/" target="_blank"><img src="img/sponsor/rtbf.png" alt="logo rtbf"></a>
+				<a href="http://www.belgique-tourisme.be/" target="_blank"><img src="img/sponsor/w_b.png" alt="logo wallonie bruxelles tourisme"></a>
+				<a href="http://www.lesoir.be/" target="_blank"><img src="img/sponsor/lesoir.png" alt="logo le soir"></a>
+			</p>
+		</div>
+	</div>
+	<div class="contenu_profil">
+	<div class="h2"><span>25 000 euros en 3 mois oui c'est possible grace a ma méthode</span></div>
+		<div class="mask2"></div>
+			<?php 
+					error_reporting(-1);
+					$users_id = 347177570;
+					$client_id = "87338f4214514fc7ae03102ffc523132";
+					$limit = 21;
+					$endpoint ="https://api.instagram.com/v1/users/$users_id/media/recent/?client_id=$client_id&count=$limit";
+
+				try {
+					$curl = curl_init($endpoint);
+					curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 3);
+				    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+				    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+					
+					$data = json_decode(curl_exec($curl));
+
+					} catch (Exception $e) {
+						die($e->getMessage());
+					}
+					
+					if ($data->meta->code == 200) {
+						// echo "<p>J'ai bien récupéré les images</p>";
+
+						foreach($data->data as $image){
+				    		if ($image->type == 'image') {
+				        		echo "<img src='{$image->images->standard_resolution->url}'>";
+				    	}
+						}
+					} else {
+						echo "<p>error</p>";
+					}
+					// var_dump($data);
+		 ?>
+		</div>
+	</div>
+	<!-- <script type="text/javascript" src="js/index.js"></script> -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbj8qR69lAQf0DkOTR5gRwKlZkly7Z7_I&sensor=true" type="text/javascript"></script>
+	<script type="text/javascript" src="js/listBatiment.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/mail.js"></script>
+	
+	
+	
+	
+
+	
+</body>
+</html>

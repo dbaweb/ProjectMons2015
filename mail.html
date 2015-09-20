@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Emailing</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500,900italic,900,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript"	src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/moderniz.js"></script>
+	<script type="text/javascript" src="js/listBatiment.js"></script>
+	<script>
+
+		
+		function getWindowHeight() {
+			var windowHeight = 0;
+			if (typeof(window.innerHeight) == 'number') {
+				windowHeight = window.innerHeight;
+			}
+			else {
+				if (document.documentElement && document.documentElement.clientHeight) {
+					windowHeight = document.documentElement.clientHeight;
+				}
+				else {
+					if (document.body && document.body.clientHeight) {
+						windowHeight = document.body.clientHeight;
+					}
+				}
+			}
+			return windowHeight;
+		}
+		function setFooter() {
+			if (document.getElementById) {
+				var windowHeight = getWindowHeight();
+				if (windowHeight > 0) {
+					var contentHeight = document.getElementById('content').offsetHeight;
+					var footerElement = document.getElementById('footer');
+					console.log(contentHeight);
+					var footerHeight  = footerElement.offsetHeight;
+					if (windowHeight - (contentHeight + footerHeight) >= 0) {
+						footerElement.style.position = 'relative';
+						footerElement.style.top = (windowHeight - (contentHeight + footerHeight)) + 'px';
+					}
+					else {
+						footerElement.style.position = 'static';
+					}
+				}
+			}
+		}
+		window.onload = function() {
+			setFooter();
+		}
+		window.onresize = function() {
+			setFooter();
+		}
+		
+		</script>
+</head>
+<body>
+<div class="container">
+	<div class="menu_container">
+		<div class="hamburger"><img src="img/hamburger_w.png" alt="toggleMenu" width="28px" height="28px"></div>
+			<div class="nav">
+				<a href="#"><img src="img/close.png" alt="" class="closeMenu" ></a>
+				<div class="nav_logo">
+				 	<p><a href="#"><img src="img/logo_rw.png" alt="logo mons 2015"></a></p>
+				 	<!-- <div class="nav_fleche"></div> -->
+				</div>
+				<ul class="ul_top">
+					<li></li>
+
+				</ul>
+				<ul class="ul_bottom">
+					<li class="li_bottom"><a class="nav_bottom" href="index.html" id="home"></a></li>
+					<li class="li_bottom"><a class="nav_bottom" href="mail.html" id="newsletter"></a></li>
+					<li class="li_bottom"><a class="nav_bottom" href="#" id="face"></a></li>
+					<li class="li_bottom"><a class="nav_bottom" href="#" id="twit"></a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="contenu_mail">
+		<div id="content">
+			<div class="mail_top">
+				<p><span>" Abonnez-vous à notre Newsletter "</span><img src="img/mail.png" alt="icone mail"></p>
+			</div>
+
+			<div class="mail_main">
+				<form action="traitement.php" method="get">
+
+					<p>
+						<label for="nom">Nom: <br>
+							<input type="text" id="nom" name="nom" placeholder="Nom">
+						</label><br>
+						<span class="error-message"></span>
+					</p>
+
+					<p>
+						<label for="email">Email: <br>
+							<input type="text" id="email" name="email" placeholder="Email">
+						</label><br>
+						<span class="error-message"></span>
+					</p>
+					<p>
+						<input id="envoyer" type="submit" value="newsletter" >
+					</p>
+				</form>
+			</div>
+		</div>
+		<div class="mail_bot" id="footer">
+			<p>
+				<img src="img/sponsor/wallonie.png" alt="logo wallonie">
+				<img src="img/sponsor/eu_culture.png" alt="logo capitale européenne de la culture">
+				<img src="img/sponsor/walonnie_bxl.png" alt="logo wallonie bruxelles">
+				<img src="img/sponsor/club.png" alt="logo club mons 2015">
+				<img src="img/sponsor/hainaut.png" alt="logo province du hainaut">
+				<img src="img/sponsor/ing.png" alt="logo ing">
+				<img src="img/sponsor/mons.png" alt="logo mons">
+				<img src="img/sponsor/lotterie.png" alt="logo loterie nationale">
+				<img src="img/sponsor/rtbf.png" alt="logo rtbf">
+				<img src="img/sponsor/w_b.png" alt="logo wallonie bruxelles tourisme">
+				<img src="img/sponsor/lesoir.png" alt="logo le soir">
+			</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/mail.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+.nav{
+			width: 100%;
+			height: 100%;
+			background-color: $grisfonce;
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: none;
+			z-index: 10000;
+			
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-decoration: none;
+		}
+		.nav_top{
+			display: block;
+			
+			background-color: $grisfonce;
+			text-align: center;
+			height:44px;
+			line-height: 44px;
+			width:100%;
+			border-bottom: 1px solid #4e4e4e;
+			font-size: 12px;
+			border-right: solid 5px #4e4e4e;
+			color: #bbb;
+			font-family: 'Roboto', sans-serif;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		.nav_top:hover{
+			border-right: 5px solid #d45b46;
+			background-color: #343434;
+			text-decoration: none;
+		}
+		.active{
+			border-right: 5px solid #d45b46;
+			background-color: #343434;
+			text-decoration: none;
+		}
+		a img{
+			position: absolute;
+			padding: 15px;
+			text-decoration: none;
+		}
+
+
+.hamburger {
+	position: fixed;
+	width: 100%;
+	z-index: 10000000;
+	display: block;
+	img{
+		position:fixed;
+		top: 10px;
+		right: 15px;
+	}
+}
+
+.nav_bottom {
+	display: block;
+	height: 65px;
+}
+
+#home {
+	background: url(../img/icon_home.png) no-repeat center;
+}
+
+.li_bottom {
+	float: left;
+	width: 25%;
+	border-right: solid 1px #4e4e4e;
+}
+
+
+
+.ul_bottom {
+	
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 65px;
+	background-color: $grisfonce;
+	border-top: 3px solid #d45b46;
+}
+
+#face {
+	background: url(../img/icon_face.png) no-repeat center;
+}
+
+#twit {
+	background: url(../img/icon_twit.png) no-repeat center;
+}
+
+#newsletter {
+	background: url(../img/icon_newsletter.png) no-repeat center;
+}
+.nav_logo{
+	display: none;
+}
+.nav_icone{
+	display: none;
+}
+@media screen and (min-width:480px){
+	.nav{
+	 	overflow: scroll;
+	 	background-color: #343434;
+	}
+	.nav_icone{
+		display: block;
+		margin: 8px 48px;
+		padding: 0;
+
+	}
+	.nav_top{
+		height: 110px;
+		line-height: 110px;
+		background-color: #343434;
+		font-size: 14px;
+
+
+		span{
+			margin-left: 40px;
+			
+		}
+	}
+	.nav_top:first-child{
+		border-top: 1px solid #4e4e4e;
+	}
+	.nav_top:hover, .nav_active{
+		background-color: $grisfonce;
+		}
+
+	.li_bottom {
+		display: inline-block;
+		width: 25%;
+		border-right: 0px;
+
+	}
+
+	.nav_bottom{
+		padding: 55px;
+	}
+	.ul_bottom {
+		position: static;
+		bottom: 0;
+		height: 110px;
+		border-top: 0px;
+		background-color: #343434;
+		
+	}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:960px){
+
+	.hamburger{
+		display: none;
+	}
+
+	.nav{
+		float: left;
+		
+		position: fixed;
+		overflow: visible;
+		display: block;
+		width: 310px;
+		background-color: #343434;
+		border-left: solid 5px #bbbbbb;
+	}
+	.nav_icone{
+		display: none;
+
+	}
+	.nav_icone:hover{
+		display: block;
+	}
+	.nav_top{
+		position: relative;
+		left: -5px;
+		height: 40px;
+		line-height: 40px;
+		border-right: 0;
+		background-color: #343434;
+		font-size: 13px;
+		border-left: 5px solid #bbbbbb;
+
+
+		span{
+			text-align: left;
+			margin-left: 0px;
+		}
+	}
+	.nav_top:hover{
+		height: 80px;
+		line-height: 80px;
+		transition: 0.4s;
+
+		span{
+			color:white;
+			padding: 12px;
+			background:rgba($red,0.7);
+			border-raduis:2px;
+		}
+	}
+	.nav_top:first-child{
+		border-top: 1px solid #4e4e4e;
+	}
+	.nav_top:hover, .nav_active{
+			border-left: 5px solid $red;
+			border-right: 0px;
+			background-color: $grisfonce;
+		}
+	.nav_logo{
+		display: block;
+		height: 250px;
+		p{
+			margin: 0;
+
+		}
+
+		img{
+			width: 175px;
+			margin: 40px 0px 0px 68px;
+		}
+	}
+	.ul_top{
+		padding-bottom: 40px;
+	}
+	.ul_bottom {
+		width: 310px;
+		position: fixed;
+		bottom: 0;
+		height: 85px;
+		border-top: 0px;
+		background-color: rgba(0,0,0,0);
+	}
+	.li_bottom {
+		display: inline-block;
+		line-height: 110px;
+		width: 25%;
+		border-right: 0px;
+
+	}
+	.nav_none{
+			display: none;
+		}
+	.nav_bottom {
+		margin-top: 25px;
+
+		padding:0px;
+	
+
+	}
+	.closeMenu{
+		display: none;
+	}
+	.nav_fleche{
+		width: 23px;
+		height: 46px;
+		background: url(../img/nav_fleche.png);
+		margin-left: 305px!important;
+		display: block;
+		z-index: 6000;
+
+	}
+
+	#container{
+		position: relative;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
